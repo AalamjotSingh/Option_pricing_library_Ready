@@ -77,6 +77,8 @@ maturity, rate and volatility. 200,000 training / 20,000 validation / 50,000 tes
 
 Autograd delta: RMSE 0.021 vs analytic (max 0.26); vega RMSE 0.020 (mean |vega| 0.30).
 
+![Hedging risk and transaction costs](results/hedging.png)
+
 ## Scope and limits
 
 - Constant-volatility GBM throughout: no stochastic volatility or jumps.
@@ -89,7 +91,7 @@ Autograd delta: RMSE 0.021 vs analytic (max 0.26); vega RMSE 0.020 (mean |vega| 
   approximation experiment, not a replacement pricer.
 - Not included: LLM fine-tuning and an NLP pipeline.
 
-## Questions to be ready for
+## Findings and interpretation
 
 - Why is the CRR error first order, and why does averaging N and N+1 steps help? (odd/even oscillation)
 - Why does hedge error fall like 1/sqrt(n) while rebalancing cost rises like sqrt(n)?
